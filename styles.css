@@ -89,13 +89,12 @@ section {
     background-color: var(--color-nav);
 }
 
-/* **ARREGLO DE CENTRADO DEL CONTENIDO DE LA PRIMERA SECCIÓN** */
+/* ARREGLO DE CENTRADO DEL CONTENIDO DE LA PRIMERA SECCIÓN */
 .hero-content {
     max-width: 800px; 
     margin: 0 auto; /* ESTO CENTRA EL BLOQUE DEL TEXTO EN LA PANTALLA */
     padding: 20px;
 }
-/* FIN DEL ARREGLO */
 
 .hero-content h2 {
     font-size: 3.5em;
@@ -148,7 +147,99 @@ footer {
     background-color: var(--color-card); /* Fondo Gris Topo Claro para contacto */
 }
 
-/* --- Estilos para la Sección Habilidades --- */
+/* --- Estilos para la Sección Habilidades (LAS TARJETAS) --- */
+
+#habilidades h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
 .skills-grid {
-    display
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.skill-item {
+    background-color: var(--color-card); /* Tarjetas Gris Topo Claro */
+    color: var(--color-text);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 4px 15px rgba(188, 143, 143, 0.5); 
+}
+
+.skill-item i {
+    font-size: 3.5em;
+    color: var(--color-accent); /* Iconos de color de acento Rosa Más Fuerte */
+    margin-bottom: 15px;
+}
+
+.skill-item h4 {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* --- Estilos para la Sección Contacto --- */
+
+.contact-links {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin: 10px 0;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    background-color: var(--color-card);
+    color: var(--color-text);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn i {
+    margin-right: 15px;
+    font-size: 1.4em;
+}
+
+/* Mantenemos el azul de LinkedIn */
+.linkedin {
+    background-color: #0077b5; 
+    color: white;
+}
+
+.linkedin:hover {
+    opacity: 0.9;
+}
+
+/* Estilos para los enlaces secundarios (colegas) */
+.secondary-btn {
+    background-color: #AAAAAA; 
+    color: white;
+}
+
+.secondary-btn:hover {
+    opacity: 0.8;
+}
+
+.contact-links p {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
