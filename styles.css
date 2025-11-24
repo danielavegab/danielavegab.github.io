@@ -1,7 +1,7 @@
 /* Importar una fuente moderna (como Roboto) */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* Definición de variables de color para armonía (Rosa Más Fuerte/Elegante) */
+/* Definición de variables de color para armonía (Rosa Melocotón Profundo) */
 :root {
     --color-background: #FDF5E6;   /* Fondo principal: Blanco Cálido/Crema */
     --color-text: #333333;         /* Texto oscuro para legibilidad */
@@ -70,13 +70,13 @@ nav ul li a:hover {
 
 /* --- Secciones Generales y MARCOS --- */
 section {
-    padding: 80px 40px; /* Espacio para el contenido dentro del marco */
+    padding: 80px 40px; 
     max-width: 1200px;
-    margin: 40px auto; /* Espacio alrededor del marco para separarlo del fondo */
-    border-radius: 10px; /* Bordes redondeados para el marco */
-    background-color: var(--color-nav); /* Fondo del marco (Blanco Puro) */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra para el efecto 3D */
-    text-align: center; /* Centrar el contenido de la sección */
+    margin: 40px auto; 
+    border-radius: 10px; 
+    background-color: var(--color-nav); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    text-align: center;
 }
 
 /* --- Override para la Sección HERO (No necesita marco, debe ser full-width) --- */
@@ -89,22 +89,19 @@ section {
     background-color: var(--color-nav);
 }
 
-/* --- Sección SOBRE MÍ y CONTACTO (usando el estilo de marco) --- */
-#sobre-mi, #contacto {
-    /* Sobreescribir alineación para el texto en estas secciones */
-    text-align: left;
+/* **ARREGLO DE CENTRADO DEL CONTENIDO DE LA PRIMERA SECCIÓN** */
+.hero-content {
+    max-width: 800px; 
+    margin: 0 auto; /* ESTO CENTRA EL BLOQUE DEL TEXTO EN LA PANTALLA */
+    padding: 20px;
 }
-
-#contacto {
-    background-color: var(--color-card); /* Fondo Gris Topo Claro para contacto */
-}
-
+/* FIN DEL ARREGLO */
 
 .hero-content h2 {
     font-size: 3.5em;
     color: var(--color-accent); /* Acento Rosa Más Fuerte */
     margin-bottom: 10px;
-    text-align: center; /* Asegurar que el hero content esté centrado */
+    text-align: center;
 }
 
 .hero-content h3 {
@@ -138,98 +135,20 @@ footer {
     background: var(--color-card);
     color: var(--color-text);
     font-size: 0.9em;
-    margin-top: 0; /* Asegurar que el footer se pegue a la última sección */
+    margin-top: 0;
+}
+
+/* --- Sección SOBRE MÍ y CONTACTO (usando el estilo de marco) --- */
+#sobre-mi, #contacto {
+    /* Sobreescribir alineación para el texto en estas secciones */
+    text-align: left;
+}
+
+#contacto {
+    background-color: var(--color-card); /* Fondo Gris Topo Claro para contacto */
 }
 
 /* --- Estilos para la Sección Habilidades --- */
-/* Las habilidades ya tienen el marco por el estilo general de SECTION */
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 50px;
-    text-align: center;
-}
-
-.skill-item {
-    background-color: var(--color-card); /* Tarjetas Gris Topo Claro */
-    color: var(--color-text);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
-    transition: transform 0.3s;
-}
-
-.skill-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 4px 15px rgba(188, 143, 143, 0.5); /* Sombra más fuerte con color de acento */
-}
-
-.skill-item i {
-    font-size: 3.5em;
-    color: var(--color-accent); /* Iconos de color de acento Rosa Más Fuerte */
-    margin-bottom: 15px;
-}
-
-.skill-item h4 {
-    margin: 0;
-    font-weight: 700;
-}
-
-/* --- Estilos para la Sección Contacto --- */
-
-.contact-links {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    margin: 10px 0;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s;
-    background-color: var(--color-card);
-    color: var(--color-text);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact-btn i {
-    margin-right: 15px;
-    font-size: 1.4em;
-}
-
-/* Mantenemos el azul de LinkedIn */
-.linkedin {
-    background-color: #0077b5; 
-    color: white;
-}
-
-.linkedin:hover {
-    opacity: 0.9;
-}
-
-/* Estilos para los enlaces secundarios (colegas) */
-.secondary-btn {
-    background-color: #AAAAAA; 
-    color: white;
-}
-
-.secondary-btn:hover {
-    opacity: 0.8;
-}
-
-.contact-links p {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-size: 1.1em;
-}
+    display
